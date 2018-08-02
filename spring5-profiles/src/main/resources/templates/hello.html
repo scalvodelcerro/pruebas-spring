@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<head>
+		<title>App prueba con Spring</title>
+	</head>
+	<body>
+		<h1>¡Hola [[${#httpServletRequest.remoteUser}]]!</h1>
+		<p>El perfil actual es [[${@environment.getActiveProfiles()[0]}]]</p>
+	</body>
+</html>

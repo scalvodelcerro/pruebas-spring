@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	<head>
+		<title>App prueba con Spring</title>
+	</head>
+	<body>
+		<h1>Listado de productos</h1>
+		<ul>
+			<li th:each="producto : ${productos}">
+				<a th:href="@{/productos/{idProducto}(idProducto=${producto.id})}" th:text="${producto.nombre}"></a>
+				<span th:text="'Precio: ' + ${producto.precio}"></span>
+			</li>
+		</ul>
+	</body>
+</html> 

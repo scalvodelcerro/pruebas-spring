@@ -7,8 +7,9 @@
 		<title>App prueba con Spring</title>
 	</head>
 	<body>
-		<h1>Home</h1>
-		<p>Click <a th:href="@{/hello}">aquí</a> para ver un saludo</p>		
-		<p>Click <a th:href="@{/productos}">aquí</a> para ver los productos en base de datos</p>		
+		<h1 th:text="${producto.nombre}"></h1>
+		<p>
+			<span th:text="'Precio: ' + ${producto.precio}"></span>
+		</p>
 	</body>
 </html> 
